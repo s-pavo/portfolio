@@ -1,261 +1,313 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Portfolio</title>
-        <link rel="shortcut icon" type="image/png" href="ic.png">
-        <link rel="stylesheet" href='./files/style.css'>
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-        <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-        
-    </head>
-    <body>
-        
-        <header class="header">
-            
-            <a href="#" class="logo">Portfolio</a>
-            <nav class="navbar" id="myLinks">
-                <a href="#Home" style="--i:1" class="active" >Home</a>
-                <a href="#About" style="--i:2">About</a>
-                <a href="#Skills" style="--i:3">Skills</a>
-                <a href="#Projects" style="--i:4">Projects</a>
-                <a href="#Contact" style="--i:5">Contact</a>
-            </nav>
-        </header>
+<head>
+    <!-- ================= META ================= -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pavithra | ECE Graduate Portfolio</title>
 
+    <!-- ================= ICONS ================= -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
-        <section class="home" id="Home">
-            <div class="home-content">
-                
-                <h3>Hello, It's Me</h3>
-                <h1>PAVITHRA S</h1>
-                <h4 style="--i:6">I'm a Engineering student who is<br>
-                    passionate in <span class="text"></span></h4>
-                
-                <div class="img">
-                     <img src="./img/cropedpic.png" class="responsive">
-                </div>
+    <!-- ================= CURSOR ================= -->
+    <style>
+        * {
+            cursor: url("https://cur.cursors-4u.net/others/oth-1/oth70.cur"), auto;
+        }
+    </style>
 
-                <div class="home-sci">
-                    <a href="https://www.linkedin.com/in/pavithrasivaram/"style="--i:7" target="_blank"><i class='bx bxl-linkedin'></i></a>
-                    <a href="https://github.com/s-pavo"style="--i:10" target="_blank"><i class='bx bxl-github'></i></a>
-                </div>
-             <a href="resume.pdf" class="resume-btn" target="_blank">Download Resume</a>
-            </div>
-        </section>
+    <!-- ================= STYLE ================= -->
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: #f6f1eb;
+            color: #333;
+            line-height: 1.6;
+        }
 
+        header {
+            background: #fff;
+            padding: 25px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-        <section>
-            <div class="about" id="About">
-                <div class="about-img">
-                    <img src="./img/midclg.jpeg" class="abt-res">
-                </div>
-                <div class="about-text">
-                    <h2>About <span>Me</span></h2>
-                    <p>I'm a Smart working engineering student specialized in Electronics and Communication Engineering.
-                        Along with my degree, I completed c, c++, Python, Microcontrollers,Ardiuno, Embedded system courses and various technologies.
-                        What I have learnt has helped me to develop many projects .         
-                        I am currently seeking roles where I can utilize my experience and skill.<br>
-                        <br>
-                        <a href="resume.pdf" class="resume-btn" target="_blank">Download Resume</a>
-                    </p>
-                </div>
-            </div>
-        </section>
+        header h1 {
+            margin: 0;
+            font-size: 26px;
+        }
 
-        
-        <section id="Skills">
-            <h1 class="subtitle">My <span>Skills</span></h1>
-            <div class="sec">
-                <div class="container1">
-                    <h1 class="heading1">Technical Skills</h1>
-                    <div class="Technical-bars">
+        nav a {
+            margin: 0 12px;
+            text-decoration: none;
+            color: #444;
+            font-weight: 500;
+        }
 
-                        <div class="bar"><i class='bx bxl-html5' style="color: #c9332e;"></i>
-                            <div class="info">
-                                <span>HTML <span class="addhtml"></span></span>
-                            </div>
-                            <div class="progress-line html">
-                                <span></span>
-                            </div>
-                        </div>
+        nav a:hover {
+            color: #c07f50;
+        }
 
-                        <div class="bar"><i class='bx bxl-css3' style="color: #147bbc;"></i>
-                            <div class="info">
-                                <span>CSS <span class="addcss"></span></span>
-                            </div>
-                            <div class="progress-line css">
-                                <span></span>
-                            </div>
-                        </div>
+        section {
+            padding: 70px 10%;
+        }
 
-                        <div class="bar"><i class='bx bxl-python' style="color: #b0bc1e;"></i>
-                            <div class="info">
-                                <span>Python <span class="addpy"></span></span>
-                            </div>
-                            <div class="progress-line python">
-                                <span></span>
-                            </div>
-                        </div>
+        h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            position: relative;
+        }
 
-                        <div class="bar"><i class='bx bxl-java' style="color: #c95d2e;"></i>
-                            <div class="info">
-                                <span>Java <span class="addjava"></span></span>
-                            </div>
-                            <div class="progress-line java">
-                                <span></span>
-                            </div>
-                        </div>
+        h2::after {
+            content: '';
+            width: 70px;
+            height: 4px;
+            background: #c07f50;
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+        }
 
-                        <div class="bar"><i class='bx bxl-c-plus-plus'style="color: #3db2fc;"></i>
-                            <div class="info">
-                                <span>C/C++ <span class="addc"></span></span>
-                            </div>
-                            <div class="progress-line cpls">
-                                <span></span>
-                            </div>
-                        </div>
+        .card {
+            background: white;
+            padding: 25px;
+            margin: 15px 0;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+        }
 
-                    </div>
-                </div>
+        /* HOME */
+        .home {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+        }
 
-                <div class="container2">
-                    <h1 class="heading1">Professional Skills</h1>
-                    <div class="radial-bars">
-                        <div class="radial-bar">
-                            <svg x="0px" y="0px" viewBox="0 0 200 200">
-                                <circle class="progress-bar" cx="100" cy="80" r="80"></circle>
-                                <circle class="path path-1" cx="100" cy="80" r="80"></circle>
-                            </svg>
-                            <div class="percentage">60%</div>
-                            <div class="text">Problem Solving</div>
-                        </div>
+        .home h1 {
+            font-size: 48px;
+            margin-bottom: 5px;
+        }
 
-                        <div class="radial-bar">
-                            <svg x="0px" y="0px" viewBox="0 0 200 200">
-                                <circle class="progress-bar" cx="100" cy="80" r="80"></circle>
-                                <circle class="path path-2" cx="100" cy="80" r="80"></circle>
-                            </svg>
-                            <div class="percentage">70%</div>
-                            <div class="text">Creativity</div>
-                        </div>
+        .home h3 {
+            color: #c07f50;
+        }
 
-                        <div class="radial-bar">
-                            <svg x="0px" y="0px" viewBox="0 0 200 200">
-                                <circle class="progress-bar" cx="100" cy="80" r="80"></circle>
-                                <circle class="path path-3" cx="100" cy="80" r="80"></circle>
-                            </svg>
-                            <div class="percentage">80%</div>
-                            <div class="text">Communication</div>
-                        </div>
+        .resume-btn {
+            font-size: 22px;
+            text-decoration: none;
+        }
 
-                        <div class="radial-bar">
-                            <svg x="0px" y="0px" viewBox="0 0 200 200">
-                                <circle class="progress-bar" cx="100" cy="80" r="80"></circle>
-                                <circle class="path path-4" cx="100" cy="80" r="80"></circle>
-                            </svg>
-                            <div class="percentage">90%</div>
-                            <div class="text">Teamwork</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        /* TIMELINE */
+        .timeline {
+            border-left: 4px solid #c07f50;
+            padding-left: 25px;
+        }
 
-        <section id="Projects">
-            <div id="portfolio" class="services">
-                <div class="main-text" id="serv">
-                    <h2>My <span>Projects</span></h2>
-                    <div class="serv-container">
-                        <div class="row">
-                            <img src="./img/FMD.png">
-                            <div class="layer">
-                                <h5>Face Mask Detection</h5>
-                                <p>Face mask of the people are detected by using OpenCV, Python and find out the person without mask.</p>
+        .timeline-item {
+            margin-bottom: 30px;
+        }
 
-                                <a href="#"><i class='bx bxs-face-mask' style="color: aliceblue;"></i></a>
+        .timeline-item h4 {
+            margin-bottom: 5px;
+        }
 
-                            </div>
-                        </div>
+        /* SKILLS */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
 
-                        <div class="row">
-                            <img src="./img/DD.png">
-                            <div class="layer">
-                                <h5>Drowsiness Detection</h5>
-                                <p>The face of the driver is captured and eye is detected by OpenCV, Python. If eye is closed alarm rings.</p>
+        .skill-box {
+            border: 2px dashed #c07f50;
+            border-radius: 15px;
+            padding: 20px;
+        }
 
-                                <a href="#"><i class='bx bxs-low-vision' style="color: aliceblue;"></i></a>
-                                
-                            </div>
-                        </div>
+        /* PROJECTS */
+        .project {
+            border-left: 6px solid #c07f50;
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
 
-                        <div class="row">
-                            <img src="./img/DA.png">
-                            <div class="layer">
-                                <h5>Desktop Application</h5>
-                                <p>A windows application to manage the work of the staff’s in the company by using Python Tkinter and SQL.</p>
+        /* CERTIFICATES */
+        .cert {
+            background: linear-gradient(135deg,#fff,#f4e8dc);
+            border-radius: 20px;
+            padding: 20px;
+            margin: 15px 0;
+        }
 
-                                <a href="#"><i class='bx bx-desktop' style="color: aliceblue;"></i></a>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        /* CONTACT */
+        form input, form textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
 
-        <section id="Services">
-            <div class="project">
-                <div class="container">
-                    <h1 class="sub-title">My <span>Services</span></h1>
-                    <div class="prj-list">
-                        <div>
-                            <i class='bx bx-code' style="color: #00eeff;"></i>
-                            <h2>Web Development</h2>
-                            <p>Plan, create and code internet sites and web pages with modern and artful design.</p>
-                            
-                        </div>
-                        <div>
-                            <i class='bx bx-cube' style="color: #00eeff;"></i>
-                            <h2>UI / UX Design</h2>
-                            <p>Specialized in creating clean, artful design that are both intuitive and functional.</p>
-                            
-                        </div>
-                        <div>
-                            <i class='bx bxl-android' style="color: #00eeff;"></i>
-                            <h2>Software Development</h2>
-                            <p>Mobile application developer with knowledge of Java and Android Studio.</p>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        button {
+            padding: 12px 25px;
+            background: #c07f50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+        }
 
+        iframe {
+            width: 100%;
+            height: 300px;
+            border-radius: 15px;
+            margin-top: 20px;
+        }
 
-        <section class="contacts" id="Contact">
-            <div class="contact-text">
-                <h2>Contact <span>Me</span></h2>
-                <h4>Let's Work Together</h4>
-                <div class="contact-list">
-                    <li><i class='bx bxs-send'></i>spavi2807@gmail.com</li>
-                    <li><i class="bx bxs-phone-call" ></i>9360815381</li>
-                </div>
-                <div class="contact-icons">
-                    <a href="https://github.com/s-pavo" target="_blank"><i class='bx bxl-github'></i></a>
-                    <a href="https://www.linkedin.com/in/pavithrasivaram/" target="_blank"><i class="bx bxl-linkedin"></i></a>
-                </div>
-            </div>
-            
-        </section>
-        
-        <div class="last-text">
-            <p>Developed by Pavo <i class='bx bx-copyright' style="color: white;"></i> 2025</p>
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #fff;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Pavithra</h1>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#profiles">Coding</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#certifications">Certificates</a>
+        <a href="#contact">Contact</a>
+        <a class="resume-btn" href="YOUR_RESUME_LINK.pdf" target="_blank">📄</a>
+    </nav>
+</header>
+
+<!-- HOME -->
+<section id="home" class="home">
+    <div>
+        <h1>Pavithra</h1>
+        <h3>ECE Graduate</h3>
+        <p><strong>Targeted Roles:</strong><br>
+        Embedded | Technical Writer | Firmware | Automation</p>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <h2>Summary</h2>
+    <div class="card">
+        <p>
+            Passionate Embedded Systems trainee with a deep interest in building smart, efficient, and reliable embedded solutions.
+            Alongside my technical journey, I’ve developed strong skills in technical writing—simplifying complex concepts into clear,
+            engaging content that connects technology with people.
+        </p>
+        <p>
+            🔗 <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/pavithrasivaram" target="_blank">linkedin.com/in/pavithrasivaram</a><br>
+            💻 <strong>GitHub:</strong> <a href="https://github.com/s-pavo" target="_blank">github.com/s-pavo</a>
+        </p>
+    </div>
+</section>
+
+<!-- CODING -->
+<section id="profiles">
+    <h2>Coding Profiles</h2>
+    <div class="card">
+        🔹 <a href="https://leetcode.com/u/s_pavo/" target="_blank">LeetCode</a><br>
+        🔹 <a href="https://www.hackerrank.com/profile/s_pavo/" target="_blank">HackerRank</a><br>
+        🔹 <a href="https://www.hackerearth.com/@s_pavo/" target="_blank">HackerEarth</a>
+    </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+    <h2>Experience</h2>
+    <div class="timeline">
+        <div class="timeline-item">
+            <h4>Aug 2025 – Nov 2025 | Content Writer – GAOTek Inc</h4>
+            <p>Content writing, product sourcing, documentation, proofreading, and team leadership.</p>
         </div>
-        <a href="#Home" class="top"><i class='bx bx-up-arrow-alt' ></i></a>
+        <div class="timeline-item">
+            <h4>Sep 2025 – Present | Embedded Systems Course – Emertxe</h4>
+            <p>Hands-on training in Embedded C, Linux, microcontrollers, and real-time systems.</p>
+        </div>
+    </div>
+</section>
 
-        <script src="./files/script.js"></script>
-    </body>  
+<!-- SKILLS -->
+<section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+        <div class="skill-box"><strong>Programming</strong><br>C, C++, Python</div>
+        <div class="skill-box"><strong>Core</strong><br>Embedded C, Microcontrollers, Linux, VLSI</div>
+        <div class="skill-box"><strong>Tools</strong><br>Git, GitHub, GitLab, MATLAB, Simulink</div>
+        <div class="skill-box"><strong>Soft Skills</strong><br>Communication, Leadership, Teamwork</div>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="project">Final Year Project – Approximate Adder Architecture for Image Blending (Verilog)</div>
+    <div class="project">Address Book in C</div>
+    <h3>Mini Projects</h3>
+    <div class="project">Aperture Based Patch Antenna – Ansys</div>
+    <div class="project">Automatic Railway Gate Control – 8051</div>
+    <div class="project">Blood Bank Management – C</div>
+    <div class="project">Digital Pulse Counter</div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+    <h2>Education</h2>
+    <div class="card">2021–2025 | B.E – ECE | Mepco Schlenk Engineering College</div>
+    <div class="card">2020–2021 | HSC – Bio Maths | SNM Matric</div>
+    <div class="card">2018–2019 | SSLC | SNM Matric</div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications">
+    <h2>Certifications</h2>
+    <div class="cert">NPTEL – Industry 4.0 & IIoT (73%)</div>
+    <div class="cert">NPTEL – Introduction to IoT (76%)</div>
+    <div class="cert">NPTEL – Joy of Computing using Python (60%)</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <h2>Contact</h2>
+    <div class="card">
+        📧 Email: spavi2807@gmail.com<br>
+        📞 Mobile: +91 9360815381<br>
+        📍 Tamil Nadu, India
+        <form>
+            <input type="text" placeholder="Your Name">
+            <input type="email" placeholder="Your Email">
+            <textarea placeholder="Message"></textarea>
+            <button>Send</button>
+        </form>
+        <iframe src="https://maps.google.com/maps?q=Tamil%20Nadu&t=&z=7&ie=UTF8&iwloc=&output=embed"></iframe>
+    </div>
+</section>
+
+<footer>
+    © 2025 Pavithra | Portfolio
+</footer>
+
+</body>
 </html>
