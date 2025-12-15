@@ -4,17 +4,24 @@
     <!-- ================= META ================= -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pavithra | ECE Graduate Portfolio</title>
+    <title>PAVITHRA | ECE Graduate Portfolio</title>
 
     <!-- ================= ICONS ================= -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
     <!-- ================= CURSOR ================= -->
     <style>
-        * {
-    cursor: url("https://cur.cursors-4u.net/cursors/cur-2/cur117.cur"), auto;
-}
+        body {
+            cursor: default;
+        }
 
+        a, button {
+            cursor: pointer;
+        }
+
+        input, textarea {
+            cursor: text;
+        }
     </style>
 
     <!-- ================= STYLE ================= -->
@@ -101,8 +108,9 @@
         }
 
         .resume-btn {
-            font-size: 22px;
+            font-size: 16px;
             text-decoration: none;
+            font-weight: bold;
         }
 
         /* TIMELINE */
@@ -113,10 +121,6 @@
 
         .timeline-item {
             margin-bottom: 30px;
-        }
-
-        .timeline-item h4 {
-            margin-bottom: 5px;
         }
 
         /* SKILLS */
@@ -141,8 +145,9 @@
 
         /* CERTIFICATES */
         .cert {
-            background: linear-gradient(135deg,#fff,#f4e8dc);
-            border-radius: 20px;
+            background: #ffffff;
+            border: 2px solid #c07f50;
+            border-radius: 18px;
             padding: 20px;
             margin: 15px 0;
         }
@@ -178,6 +183,51 @@
             background: #fff;
             margin-top: 40px;
         }
+
+        /* ================= RESPONSIVE DESIGN ================= */
+        @media (max-width: 768px) {
+
+            header {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+
+            nav {
+                flex-wrap: wrap;
+            }
+
+            nav a {
+                margin: 6px 8px;
+                font-size: 14px;
+            }
+
+            section {
+                padding: 45px 6%;
+            }
+
+            .home {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+
+            .home h1 {
+                font-size: 36px;
+            }
+
+            h2 {
+                font-size: 26px;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            iframe {
+                height: 220px;
+            }
+        }
     </style>
 </head>
 
@@ -188,14 +238,14 @@
     <nav>
         <a href="#home">Home</a>
         <a href="#about">About</a>
-        <a href="#profiles">Coding Profiles</a>
+        <a href="#profiles">Coding PLatforms</a>
         <a href="#experience">Experience</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
         <a href="#education">Education</a>
         <a href="#certifications">Certificates</a>
         <a href="#contact">Contact</a>
-        <a class="resume-btn" href="YOUR_RESUME_LINK.pdf" target="_blank">Download Resume</a>
+        <a class="resume-btn" href="YOUR_RESUME_LINK.pdf" target="_blank"> Resume</a>
     </nav>
 </header>
 
@@ -219,114 +269,48 @@
             engaging content that connects technology with people.
         </p>
         <p>
-            🔗 <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/pavithrasivaram" target="_blank">linkedin.com/in/pavithrasivaram</a><br>
-            💻 <strong>GitHub:</strong> <a href="https://github.com/s-pavo" target="_blank">github.com/s-pavo</a>
+            🔗 <a href="https://www.linkedin.com/in/pavithrasivaram" target="_blank">LinkedIn</a><br>
+            💻 <a href="https://github.com/s-pavo" target="_blank">GitHub</a>
         </p>
     </div>
 </section>
 
-<!-- CODING -->
-<section id="profiles">
-    <h2>Coding Profiles</h2>
-    <div class="card">
-        🔹 <a href="https://leetcode.com/u/s_pavo/" target="_blank">LeetCode</a><br>
-        🔹 <a href="https://www.hackerrank.com/profile/s_pavo/" target="_blank">HackerRank</a><br>
-        🔹 <a href="https://www.hackerearth.com/@s_pavo/" target="_blank">HackerEarth</a>
-    </div>
-</section>
-
-<!-- EXPERIENCE -->
-<section id="experience">
-    <h2>Experience</h2>
-    <div class="timeline">
-        <div class="timeline-item">
-            <h4>Aug 2025 – Nov 2025 | Content Writer – GAOTek Inc</h4>
-            <p>Content writing, product sourcing, documentation, proofreading, and team leadership.</p>
-        </div>
-        <div class="timeline-item">
-            <h4>Sep 2025 – Present | Embedded Systems Course – Emertxe</h4>
-            <p>Hands-on training in Embedded C, Linux, microcontrollers, and real-time systems.</p>
-        </div>
-    </div>
-</section>
-
-<!-- SKILLS -->
-<section id="skills">
-    <h2>Skills</h2>
-    <div class="skills-grid">
-        <div class="skill-box"><strong>Programming</strong><br>C, C++, Python</div>
-        <div class="skill-box"><strong>Core</strong><br>Embedded C, Microcontrollers, Linux, VLSI</div>
-        <div class="skill-box"><strong>Tools</strong><br>Git, GitHub, GitLab, MATLAB, Simulink, Ansys</div>
-        <div class="skill-box"><strong>Soft Skills</strong><br>Communication, Leadership, Teamwork</div>
-    </div>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects">
-    <h2>Projects</h2>
-    <div class="project">Address Book in C</div>
-    <div class="project">Final Year Project – Approximate Adder Architecture for Image Blending (Verilog)</div>
-    <h3>Mini Projects</h3>
-    <div class="project">Design of an Aperture Based Patch Antenna using Ansys</div>
-    <div class="project">Automatic Railway Gate Control using 8051 microcontroller</div>
-    <div class="project">Blood Bank Management using C– C</div>
-    <div class="project">Digital Pulse Counter</div>
-</section>
-
-<!-- EDUCATION -->
-<section id="education">
-    <h2>Education</h2>
-    <div class="card">2021–2025 | B.E – ECE | Mepco Schlenk Engineering College, Sivakasi</div>
-    <div class="card">2020–2021 | HSC | SNM Matric Hr Sec School, Sivakasi</div>
-    <div class="card">2018–2019 | SSLC | SNM Matric Hr Sec School, Sivakasi</div>
-</section>
-
-<!-- CERTIFICATIONS -->
-<section id="certifications">
-    <h2>Certifications</h2>
-
-    <div class="cert-grid">
-
-        <a href="CERTIFICATE_LINK_1.pdf" target="_blank" class="cert-box">
-            <strong>NPTEL – Introduction to Industry 4.0 & IIoT</strong><br>
-            <small>Jan – Apr 2024 | 73%</small>
-        </a>
-
-        <a href="CERTIFICATE_LINK_2.pdf" target="_blank" class="cert-box">
-            <strong>NPTEL – Introduction to IoT</strong><br>
-            <small>Jul – Oct 2023 | 76%</small>
-        </a>
-
-        <a href="CERTIFICATE_LINK_3.pdf" target="_blank" class="cert-box">
-            <strong>NPTEL – The Joy of Computing using Python</strong><br>
-            <small>Jan – Apr 2023 | 60%</small>
-        </a>
-
-    </div>
-</section>
-
+    <!-- CODING --> 
+    <section id="profiles">
+        <h2>Coding Profiles</h2>
+        <div class="card"> 
+            🔹 <a href="https://leetcode.com/u/s_pavo/" target="_blank">LeetCode</a><br> 
+            🔹 <a href="https://www.hackerrank.com/profile/s_pavo/" target="_blank">HackerRank</a><br> 
+            🔹 <a href="https://www.hackerearth.com/@s_pavo/" target="_blank">HackerEarth</a> 
+        </div> </section> 
+    <!-- EXPERIENCE -->
+    <section id="experience"> 
+        <h2>Experience</h2> 
+        <div class="timeline"> 
+            <div class="timeline-item">
+                <h4>Aug 2025 – Nov 2025 | Content Writer – GAOTek Inc</h4>
+                <p>Content writing, product sourcing, documentation, proofreading, and team leadership.</p>
+            </div> <div class="timeline-item"> 
+                <h4>Sep 2025 – Present | Embedded Systems Course – Emertxe</h4>
+                <p>Hands-on training in Embedded C, Linux, microcontrollers, and real-time systems.</p>
+            </div> </div> </section> 
+    <!-- SKILLS -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-box">
+                <strong>Programming</strong>
+                <br>C, C++, Python</div>
+            <div class="skill-box"><strong>Core</strong><br>Embedded C, Microcontrollers, Linux, VLSI</div> <div class="skill-box"><strong>Tools</strong><br>Git, GitHub, GitLab, MATLAB, Simulink, Ansys</div> <div class="skill-box"><strong>Soft Skills</strong><br>Communication, Leadership, Teamwork</div> </div> </section> <!-- PROJECTS --> <section id="projects"> <h2>Projects</h2> <div class="project">Address Book in C</div> <div class="project">Final Year Project – Approximate Adder Architecture for Image Blending (Verilog)</div> <h3>Mini Projects</h3> <div class="project">Design of an Aperture Based Patch Antenna using Ansys</div> <div class="project">Automatic Railway Gate Control using 8051 microcontroller</div> <div class="project">Blood Bank Management using C– C</div> <div class="project">Digital Pulse Counter</div> </section> <!-- EDUCATION --> <section id="education"> <h2>Education</h2> <div class="card">2021–2025 | B.E – ECE | Mepco Schlenk Engineering College, Sivakasi</div> <div class="card">2020–2021 | HSC | SNM Matric Hr Sec School, Sivakasi</div> <div class="card">2018–2019 | SSLC | SNM Matric Hr Sec School, Sivakasi</div> </section> <!-- CERTIFICATIONS --> <section id="certifications"> <h2>Certifications</h2> <div class="cert">NPTEL – Industry 4.0 & IIoT (73%)</div> <div class="cert">NPTEL – Introduction to IoT (76%)</div> <div class="cert">NPTEL – Joy of Computing using Python (60%)</div> </section>
 
 <!-- CONTACT -->
 <section id="contact">
     <h2>Contact</h2>
     <div class="card">
-        📧 Email:
-<a href="mailto:spavi2807@gmail.com">spavi2807@gmail.com</a><br><br>
+        📧 <a href="mailto:spavi2807@gmail.com">spavi2807@gmail.com</a><br><br>
+        📞 <a href="tel:+919360815381">+91 9360815381</a><br><br>
+        📍 <a href="https://www.google.com/maps/place/Tamil+Nadu" target="_blank">Tamil Nadu, India</a>
 
-📞 Mobile:
-<a href="tel:+919360815381">+91 9360815381</a><br><br>
-
-📍 Location:
-<a href="https://www.google.com/maps/place/Tamil+Nadu" target="_blank">
-Tamil Nadu, India
-</a>
-
-        <form>
-            <input type="text" placeholder="Your Name">
-            <input type="email" placeholder="Your Email">
-            <textarea placeholder="Message"></textarea>
-            <button>Send</button>
-        </form>
         <iframe src="https://maps.google.com/maps?q=Tamil%20Nadu&t=&z=7&ie=UTF8&iwloc=&output=embed"></iframe>
     </div>
 </section>
