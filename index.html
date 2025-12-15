@@ -1,95 +1,435 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pavithra | Portfolio Dummy</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pavithra Sivaram Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background-color: #f5efe6;
-      color: #333;
-      line-height: 1.6;
+      margin:0;
+      padding:0;
+      font-family:'Poppins', sans-serif;
+      scroll-behavior:smooth;
+      background-color:#FFF8F0;
+      color:#5A463A;
     }
-    header {
-      background-color: #e8dfd2;
-      padding: 40px 20px;
-      text-align: center;
+
+    a {
+      text-decoration:none;
+      color:inherit;
     }
+
+    a:hover {
+      color:#8B6D5C;
+      transform:scale(1.05);
+      transition:0.3s;
+    }
+
     section {
-      max-width: 900px;
-      margin: auto;
-      padding: 30px 20px;
+      padding:80px 50px;
     }
-    h1, h2 {
-      margin-bottom: 10px;
+
+    /* Hero Section */
+    #home {
+      background-color:#F5F0E1;
+      height:100vh;
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      align-items:center;
+      text-align:left;
     }
-    .skills span {
-      display: inline-block;
-      background: #fff;
-      padding: 8px 12px;
-      margin: 6px;
-      border-radius: 6px;
-      font-size: 14px;
+    #home div {
+      flex:1;
+      min-width:300px;
     }
-    .project {
-      background: #fff;
-      padding: 15px;
-      margin-bottom: 15px;
-      border-radius: 8px;
+    #home img {
+      border-radius:50%;
+      max-width:80%;
+      box-shadow:0px 4px 15px rgba(0,0,0,0.2);
     }
+
+    #home a.button {
+      background-color:#8B6D5C;
+      color:#F5F0E1;
+      padding:12px 25px;
+      margin:0 10px;
+      border-radius:8px;
+      font-weight:bold;
+      transition:all 0.3s;
+    }
+    #home a.button:hover {
+      background-color:#5A463A;
+      transform:scale(1.05);
+    }
+
+    /* Skills Section */
+    .skill-card {
+      background-color:#FFF8F0;
+      padding:20px 30px;
+      border-radius:15px;
+      box-shadow:0px 4px 15px rgba(0,0,0,0.1);
+      min-width:200px;
+      margin-bottom:20px;
+    }
+    .skill-card div {
+      background-color:#DDD;
+      border-radius:8px;
+      height:10px;
+      width:100%;
+    }
+    .skill-card div span {
+      display:block;
+      background-color:#8B6D5C;
+      height:100%;
+      border-radius:8px;
+    }
+
+    /* Projects Section */
+    .project-card {
+      background-color:#F5F0E1;
+      border-radius:15px;
+      box-shadow:0px 4px 20px rgba(0,0,0,0.1);
+      width:300px;
+      overflow:hidden;
+      transition: transform 0.3s;
+      margin-bottom:20px;
+    }
+    .project-card:hover {
+      transform: translateY(-5px) scale(1.03);
+    }
+    .project-card img {
+      width:100%;
+      height:auto;
+    }
+    .project-card button, .project-card a {
+      background-color:#8B6D5C;
+      color:#F5F0E1;
+      padding:8px 15px;
+      margin-right:10px;
+      border-radius:8px;
+      font-size:0.85rem;
+      display:inline-block;
+    }
+    .project-card button:hover, .project-card a:hover {
+      background-color:#5A463A;
+      transform:scale(1.05);
+      transition:all 0.3s;
+    }
+
+    /* Timeline Section */
+    .timeline-container {
+      position:relative;
+      max-width:900px;
+      margin:0 auto;
+    }
+    .timeline-container::before {
+      content:'';
+      position:absolute;
+      left:50%;
+      top:0;
+      transform:translateX(-50%);
+      width:4px;
+      height:100%;
+      background-color:#8B6D5C;
+    }
+    .timeline-item {
+      padding:20px 40px;
+      position:relative;
+      width:50%;
+      box-sizing:border-box;
+    }
+    .timeline-item.left {
+      left:0;
+    }
+    .timeline-item.right {
+      left:50%;
+    }
+    .timeline-item .content {
+      background-color:#FFF8F0;
+      padding:20px;
+      border-radius:15px;
+      box-shadow:0px 4px 15px rgba(0,0,0,0.1);
+      position:relative;
+    }
+    .timeline-item .circle {
+      width:20px;
+      height:20px;
+      background-color:#8B6D5C;
+      border-radius:50%;
+      position:absolute;
+      top:20px;
+    }
+    .timeline-item.left .circle { right:-12px; }
+    .timeline-item.right .circle { left:-12px; }
+
+    /* Footer / Contact */
     footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
-      color: #666;
+      background-color:#FFF8F0;
+      text-align:center;
+      padding:60px 30px;
+      color:#5A463A;
+    }
+    footer a {
+      color:#5A463A;
+    }
+    footer a:hover {
+      color:#FFF8F0;
+      background-color:#5A463A;
+      transform:scale(1.05);
+      transition:0.3s;
+    }
+
+    /* Navbar */
+    header {
+      background-color:#F5F0E1;
+      position:fixed;
+      top:0;
+      left:0;
+      width:100%;
+      z-index:1000;
+      box-shadow:0px 2px 10px rgba(0,0,0,0.1);
+    }
+    .nav-container {
+      max-width:1200px;
+      margin:0 auto;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:15px 30px;
+    }
+    nav ul {
+      display:flex;
+      gap:25px;
+      list-style:none;
+      margin:0;
+      padding:0;
+    }
+    nav ul li a {
+      color:#5A463A;
+      transition:0.3s;
+    }
+    nav ul li a:hover {
+      color:#8B6D5C;
+      transform:scale(1.05);
+    }
+    #hamburger {
+      display:none;
+      flex-direction:column;
+      cursor:pointer;
+      gap:5px;
+    }
+    #hamburger span {
+      width:25px;
+      height:3px;
+      background-color:#5A463A;
+    }
+
+    @media screen and (max-width:768px){
+      nav ul {
+        display:none;
+        flex-direction:column;
+        background-color:#F5F0E1;
+        position:absolute;
+        top:60px;
+        right:30px;
+        padding:10px 20px;
+        border-radius:10px;
+      }
+      #hamburger {
+        display:flex;
+      }
+      #home, #about, #skills, #projects, #experience, footer {
+        padding:50px 20px;
+      }
+      .timeline-item {
+        width:100%;
+        left:0 !important;
+        margin-bottom:30px;
+      }
+      .timeline-item .circle {
+        left:-12px !important;
+        right:auto !important;
+      }
+      .skill-card { min-width:100%; }
+      .project-card { width:100%; }
+      #home { text-align:center; }
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Pavithra S</h1>
-    <p>Embedded Systems Trainee | ECE Graduate</p>
-  </header>
-
-  <section>
-    <h2>About Me</h2>
-    <p>
-      This is a dummy portfolio. I am an Electronics and Communication Engineering graduate
-      interested in Embedded Systems, C programming, and digital design.
-    </p>
-  </section>
-
-  <section>
-    <h2>Skills</h2>
-    <div class="skills">
-      <span>C Programming</span>
-      <span>Embedded C</span>
-      <span>Arduino</span>
-      <span>Verilog</span>
-      <span>MATLAB</span>
+<!-- Navbar -->
+<header>
+  <div class="nav-container">
+    <div style="font-size:1.5rem; font-weight:bold; color:#5A463A;">Pavithra Sivaram</div>
+    <nav>
+      <ul id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
-  </section>
+  </div>
+</header>
 
-  <section>
-    <h2>Projects</h2>
-    <div class="project">Dummy Project 1 – Description goes here</div>
-    <div class="project">Dummy Project 2 – Description goes here</div>
-    <div class="project">Dummy Project 3 – Description goes here</div>
-  </section>
+<!-- Hero Section -->
+<section id="home">
+  <div>
+    <h1 style="font-size:3rem;">Pavithra Sivaram</h1>
+    <h2 style="font-size:1.5rem; color:#8B6D5C;">Embedded Systems Trainee | Technical Writer</h2>
+    <p>Designing smart embedded systems and writing clean, efficient code.</p>
+    <div style="margin-top:30px;">
+      <a href="#projects" class="button">View Projects</a>
+      <a href="#contact" class="button">Contact Me</a>
+    </div>
+  </div>
+  <div>
+    <img src="https://via.placeholder.com/300" alt="Profile Picture">
+  </div>
+</section>
 
-  <section>
-    <h2>Contact</h2>
-    <a href="mailto:spavi2807@gmail.com">spavi2807@gmail.com</a>
-    <p>LinkedIn: linkedin.com/in/pavithrasivaram</p>
-    <p>GitHub: github.com/s-pavo</p>
-  </section>
+<!-- About Me Section -->
+<section id="about">
+  <div>
+    <h2>About Me</h2>
+    <p>Hi! I'm Pavithra Sivaram, an Embedded Systems Trainee and Technical Writer. I love designing smart embedded systems, coding efficiently, and creating projects that solve real-world problems.</p>
+    <p>My expertise includes C programming, Verilog, MATLAB, and embedded system design. I’m passionate about building innovative solutions that are both functional and energy-efficient.</p>
+  </div>
+  <div style="display:flex; flex-direction:column; align-items:center;">
+    <img src="https://via.placeholder.com/250" alt="About Image">
+    <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:20px;">
+      <span style="background-color:#8B6D5C; color:#F5F0E1; padding:8px 12px; border-radius:12px;">C Programming</span>
+      <span style="background-color:#8B6D5C; color:#F5F0E1; padding:8px 12px; border-radius:12px;">Verilog</span>
+      <span style="background-color:#8B6D5C; color:#F5F0E1; padding:8px 12px; border-radius:12px;">MATLAB</span>
+      <span style="background-color:#8B6D5C; color:#F5F0E1; padding:8px 12px; border-radius:12px;">Embedded Systems</span>
+    </div>
+  </div>
+</section>
 
-  <footer>
-    © 2025 Pavithra S | Portfolio 
-  </footer>
+<!-- Skills Section -->
+<section id="skills">
+  <h2>Skills</h2>
+  <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px;">
+    <div class="skill-card">
+      <h3>C Programming</h3>
+      <div><span style="width:90%;"></span></div>
+    </div>
+    <div class="skill-card">
+      <h3>Verilog</h3>
+      <div><span style="width:85%;"></span></div>
+    </div>
+    <div class="skill-card">
+      <h3>MATLAB</h3>
+      <div><span style="width:80%;"></span></div>
+    </div>
+    <div class="skill-card">
+      <h3>Embedded Systems</h3>
+      <div><span style="width:85%;"></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects">
+  <h2>Projects</h2>
+  <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:30px;">
+    
+    <div class="project-card">
+      <img src="https://via.placeholder.com/300x180" alt="Project Image">
+      <div style="padding:20px; text-align:left;">
+        <h3>Embedded Heater Control System</h3>
+        <p>Designed a temperature-based heater control system using Arduino, with multiple states and sensor feedback.</p>
+        <p style="color:#8B6D5C;">Technologies: C, Arduino, Wokwi</p>
+        <div style="margin-top:15px;">
+          <a href="#">View Demo</a>
+          <a href="https://github.com/s-pavo" target="_blank">View Repo</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="https://via.placeholder.com/300x180" alt="Project Image">
+      <div style="padding:20px; text-align:left;">
+        <h3>Indicator Control via Mobile (BLE)</h3>
+        <p>Developed a mobile-controlled indicator system using BLE protocol, allowing left/right/hazard light operations.</p>
+        <p style="color:#8B6D5C;">Technologies: C, BLE, Wokwi</p>
+        <div style="margin-top:15px;">
+          <a href="#">View Demo</a>
+          <a href="https://github.com/s-pavo" target="_blank">View Repo</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Experience Section -->
+<section id="experience">
+  <h2>Experience & Education</h2>
+  <div class="timeline-container">
+    <div class="timeline-item left">
+      <div class="content">
+        <h3>Embedded Systems Intern</h3>
+        <p>Moodroder Company | 2025</p>
+        <p>Worked on mobile-controlled indicator system and heater control projects using C and Arduino.</p>
+        <div class="circle"></div>
+      </div>
+    </div>
+    <div class="timeline-item right">
+      <div class="content">
+        <h3>B.E in Electronics & Communication</h3>
+        <p>Mepco Schlenk Engineering College | 2021-2025</p>
+        <p>Studied embedded systems, digital electronics, and communication technologies.</p>
+        <div class="circle"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer / Contact Section -->
+<footer>
+  <h2>Contact Me</h2>
+  <p>Mail ID: <a href="mailto:spavi2807@gmail.com">📧 spavi2807@gmail.com</a></p>
+  <p>LinkedIn: <a href="https://www.linkedin.com/in/pavithrasivaram" target="_blank">🔗 pavithrasivaram</a></p>
+  <p>GitHub: <a href="https://github.com/s-pavo" target="_blank">💻 s-pavo</a></p>
+  <a href="#" style="display:inline-block; background-color:#8B6D5C; color:#F5F0E1; padding:12px 25px; margin-top:10px; border-radius:8px;">Download Resume</a>
+  <p style="margin-top:40px; font-size:0.9rem; color:#8B6D5C;">&copy; 2025 Pavithra Sivaram. All Rights Reserved.</p>
+</footer>
+
+<!-- Navbar JS -->
+<script>
+  // Smooth scroll
+  document.querySelectorAll('nav ul li a').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.querySelector(link.getAttribute('href'));
+      target.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+
+  // Hamburger toggle
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+
+  hamburger.addEventListener('click', () => {
+    if(navLinks.style.display === 'flex'){
+      navLinks.style.display = 'none';
+    } else {
+      navLinks.style.display = 'flex';
+    }
+  });
+</script>
 
 </body>
 </html>
+
