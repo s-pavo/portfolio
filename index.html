@@ -22,101 +22,100 @@ a, button {
     </style>
 
     <!-- ================= STYLE ================= -->
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', sans-serif;
-            background: #f6f1eb;
-            color: #333;
-            line-height: 1.6;
-        }
+    <style> 
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f6f1eb;
+  color: #333;
+  line-height: 1.6;
+  cursor: url("https://cur.cursors-4u.net/cursors/cur-2/cur117.cur"), auto;
+}
 
-        header {
-            background: #fff;
-            padding: 25px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+a, button {
+  cursor: pointer;
+}
 
-        header h1 {
-            margin: 0;
-            font-size: 26px;
-        }
+/* ================= HEADER ================= */
 
-        nav a {
-            margin: 0 12px;
-            text-decoration: none;
-            color: #444;
-            font-weight: 500;
-        }
+header {
+  background: #fff;
+  padding: 25px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-        nav a:hover {
-            color: #c07f50;
-        }
+header h1 {
+  margin: 0;
+  font-size: 26px;
+}
 
-        section {
-            padding: 70px 10%;
-        }
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
 
-        h2 {
-            font-size: 32px;
-            margin-bottom: 20px;
-            position: relative;
-        }
+nav a {
+  margin: 0 12px;
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
+}
 
-        h2::after {
-            content: '';
-            width: 70px;
-            height: 4px;
-            background: #c07f50;
-            position: absolute;
-            bottom: -8px;
-            left: 0;
-        }
+nav a:hover {
+  color: #c07f50;
+}
 
-        .card {
-            background: white;
-            padding: 25px;
-            margin: 15px 0;
-            border-radius: 15px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-        }
+/* ================= SECTIONS ================= */
 
-        /* HOME */
-        .home {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 50px;
-        }
+section {
+  padding: 70px 10%;
+}
 
-        .home h1 {
-            font-size: 48px;
-            margin-bottom: 5px;
-        }
+h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  position: relative;
+}
 
-        .home h3 {
-            color: #c07f50;
-        }
+h2::after {
+  content: '';
+  width: 70px;
+  height: 4px;
+  background: #c07f50;
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+}
 
-        .resume-btn {
-            font-size: 16px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        /* HOME PROFILE LAYOUT */
+/* ================= CARD ================= */
+
+.card {
+  background: #fff;
+  padding: 25px;
+  margin: 15px 0;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+/* ================= HOME ================= */
+
 .home {
   display: flex;
   align-items: center;
-  gap: 50px;
+  justify-content: center;
+  gap: 40px;
+  min-height: 80vh;
 }
 
 /* PROFILE IMAGE */
+
 .home-img img {
   width: 200px;
   height: 200px;
@@ -124,142 +123,176 @@ a, button {
   object-fit: cover;
   border: 6px solid #c07f50;
   box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
 }
 
-/* TEXT */
+.home-img img:hover {
+  transform: scale(1.05);
+}
+
+/* HOME TEXT */
+
+.home-text {
+  max-width: 520px;
+}
+
 .home-text h1 {
   font-size: 48px;
+  margin-bottom: 6px;
 }
 
-/* MOBILE RESPONSIVE */
+.home-text h3 {
+  font-size: 22px;
+  color: #c07f50;
+  margin-bottom: 15px;
+}
+
+.home-text p {
+  font-size: 16px;
+}
+
+/* ================= TIMELINE ================= */
+
+.timeline {
+  border-left: 4px solid #c07f50;
+  padding-left: 25px;
+}
+
+.timeline-item {
+  margin-bottom: 30px;
+}
+
+/* ================= SKILLS ================= */
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.skill-box {
+  border: 2px dashed #c07f50;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+/* ================= PROJECTS ================= */
+
+.project {
+  border-left: 6px solid #c07f50;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+/* ================= CERTIFICATIONS ================= */
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.cert {
+  background: #ffffff;
+  border: 2px solid #c07f50;
+  border-radius: 18px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cert:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+/* ================= CONTACT ================= */
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 12px 25px;
+  background: #c07f50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+iframe {
+  width: 100%;
+  height: 300px;
+  border-radius: 15px;
+  margin-top: 20px;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #fff;
+  margin-top: 40px;
+}
+
+/* ================= RESPONSIVE ================= */
+
 @media (max-width: 768px) {
+
+  header {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  nav a {
+    margin: 6px 8px;
+    font-size: 14px;
+  }
+
+  section {
+    padding: 45px 6%;
+  }
+
   .home {
     flex-direction: column;
     text-align: center;
+    gap: 25px;
   }
 
   .home-img img {
     width: 160px;
     height: 160px;
   }
+
+  .home-text h1 {
+    font-size: 36px;
+  }
+
+  .home-text h3 {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  iframe {
+    height: 220px;
+  }
 }
 
-
-        /* TIMELINE */
-        .timeline {
-            border-left: 4px solid #c07f50;
-            padding-left: 25px;
-        }
-
-        .timeline-item {
-            margin-bottom: 30px;
-        }
-
-        /* SKILLS */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-        }
-
-        .skill-box {
-            border: 2px dashed #c07f50;
-            border-radius: 15px;
-            padding: 20px;
-        }
-
-        /* PROJECTS */
-        .project {
-            border-left: 6px solid #c07f50;
-            padding-left: 20px;
-            margin-bottom: 20px;
-        }
-
-        /* CERTIFICATES */
-        .cert {
-            background: #ffffff;
-            border: 2px solid #c07f50;
-            border-radius: 18px;
-            padding: 20px;
-            margin: 15px 0;
-        }
-
-        /* CONTACT */
-        form input, form textarea {
-            width: 100%;
-            padding: 12px;
-            margin: 10px 0;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-        }
-
-        button {
-            padding: 12px 25px;
-            background: #c07f50;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-size: 16px;
-        }
-
-        iframe {
-            width: 100%;
-            height: 300px;
-            border-radius: 15px;
-            margin-top: 20px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #fff;
-            margin-top: 40px;
-        }
-
-        /* ================= RESPONSIVE DESIGN ================= */
-        @media (max-width: 768px) {
-
-            header {
-                flex-direction: column;
-                gap: 10px;
-                text-align: center;
-            }
-
-            nav {
-                flex-wrap: wrap;
-            }
-
-            nav a {
-                margin: 6px 8px;
-                font-size: 14px;
-            }
-
-            section {
-                padding: 45px 6%;
-            }
-
-            .home {
-                flex-direction: column;
-                text-align: center;
-                gap: 20px;
-            }
-
-            .home h1 {
-                font-size: 36px;
-            }
-
-            h2 {
-                font-size: 26px;
-            }
-
-            .skills-grid {
-                grid-template-columns: 1fr;
-            }
-
-            iframe {
-                height: 220px;
-            }
-        }
     </style>
 </head>
 
