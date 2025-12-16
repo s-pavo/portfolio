@@ -109,6 +109,41 @@ a, button {
             text-decoration: none;
             font-weight: bold;
         }
+        /* HOME PROFILE LAYOUT */
+.home {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+/* PROFILE IMAGE */
+.home-img img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 6px solid #c07f50;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* TEXT */
+.home-text h1 {
+  font-size: 48px;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  .home {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .home-img img {
+    width: 160px;
+    height: 160px;
+  }
+}
+
 
         /* TIMELINE */
         .timeline {
@@ -248,15 +283,21 @@ a, button {
     </nav>
 </header>
 
-<!-- HOME -->
+    <!-- HOME -->
 <section id="home" class="home">
-    <div>
-        <h1>PAVITHRA</h1>
-        <h3>ECE Graduate</h3>
-        <p><strong>Targeted Roles</strong><br>
-        Embedded | Firmware | Automation | Technical Writer</p>
-    </div>
-    
+  
+  <div class="home-img">
+    <img src="profile.jpg" alt="Pavithra Profile">
+  </div>
+
+  <div class="home-text">
+    <h1>PAVITHRA</h1>
+    <h3>ECE Graduate</h3>
+    <p><strong>Targeted Roles</strong><br>
+      Embedded | Firmware | Automation | Technical Writer
+    </p>
+  </div>
+
 </section>
 
 <!-- ABOUT -->
